@@ -1,0 +1,314 @@
+﻿/* ==============================================================================================
+This copyright notice must be kept untouched in the stylesheet at all times.
+The original version of this stylesheet and the associated (x)html
+is available at http://www.script-tutorials.com/bootstrap-one-page-template-with-parallax-effect/
+Copyright (c) Script Tutorials. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any way to fit your requirements.
+================================================================================================= */
+
+/*
+Change by Jason Scott (April 2016) to better suit requirements.
+*/
+
+/* general styles */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+
+/* padded section */
+.pad-section {
+  padding: 50px 0;
+}
+.pad-section img {
+  width: 100%;
+}
+
+/* Keep element roughly centered regardless fo screen width - used by the
+achievement and certificates <ul> element. */
+.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+@media (max-width: 768px) {
+    .center {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
+@media (min-width: 1200px) {
+    .center {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+
+/* vertical-centered text */
+/* Add a media query so that we increase the padding on larger screens. This
+is just part of moving the text down a little of a dadrker part of the image. */
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+
+  /* test moving the text down a bit */
+  padding-top: 100px;
+}
+.text-vcenter h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .text-vcenter {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    /* test moving the text down a bit */
+    padding-top: 250px;
+  }
+  .text-vcenter h1 {
+    font-size: 4.5em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* additional sections */
+#home {
+  /*background: url(../images/perth_night.jpg) no-repeat center center fixed;*/
+  background: url(../images/perth_day_blur.jpg) no-repeat center center fixed;
+  display: table;
+  height: 80%;  /*100%;*/
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+#about {
+}
+
+#services {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+#services .glyphicon {
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 60px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  vertical-align: middle;
+  width: 140px;
+}
+
+#information {
+  /* Darken the background image with a gradient - gives better visibility of the floating divs */
+  /*background: url(../images/fiori2.png) no-repeat center center fixed;*/
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/fiori2.png) no-repeat center center fixed;
+  background-color: #253845;
+  display: table;
+  height: 800px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: contain; /* Swtich to contain to make the image smaler and fit within the space */
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+#information .panel {
+  opacity: 0.9;
+}
+
+#location {
+  background-color: #306d9f;
+  color: #ffffff;
+}
+
+#google_map {
+  height: 500px;
+}
+
+footer {
+  padding: 20px 0;
+}
+footer .glyphicon {
+  color: #333333;
+  font-size: 60px;
+}
+footer .glyphicon:hover {
+  color: #306d9f;
+}
+
+.svgico {
+  display: inline-block;
+}
+
+#timeline {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .timelineitem:nth-child(odd) {
+    margin-left: 50%;
+    border-left: 5px solid #333;
+    text-align: left;
+  }
+  .timelineitem:nth-child(even) {
+    margin-right: 50%;
+    margin-left: 5px;
+    border-right: 5px solid #333;
+    text-align: right;
+  }
+  .timelineitem {
+    width: 50%;
+    position: relative;
+    padding: 20px;
+  }
+  .timelineitem:nth-child(odd):before {
+   left: -8px;
+  }
+  .timelineitem:nth-child(even):before {
+    right: -8px;
+  }
+}
+
+.timelineitem:before {
+  width: 11px;
+  height: 11px;
+  background: #333;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+}
+
+/* Drop the max-width break down from 768 to 767 */
+@media (max-width: 767px) {
+  .timelineitem {
+    border-left: 5px solid #333;
+    text-align: left;
+    margin-left: 10px;
+    padding: 5px;
+    position: relative;
+  }
+  .timelineitem:before {
+    left: -8px;
+  }
+}
+
+.tdate {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: -5px;
+  color: rgb(132,0,0);
+}
+.ttitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+.tdesc {
+  font-size: 18px;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .tdate {
+    font-size: 16px;
+  }
+  .ttitle {
+    font-size: 16px;
+  }
+  .tdesc {
+    font-size: 16px;
+  }
+}
+.thigh {
+  color: #070;
+}
+
+.imgme {
+  border: 3px solid white;
+  /* box-shadow: #AAA 0px 0px 4px 0px; */
+  float: none;
+  width: 80px;
+  margin-bottom: 150px;
+  margin-right: 20px;
+  display: inline-block
+}
+
+@media (max-width: 768px) {
+  .imgme {
+    border: 3px solid white;
+    /* box-shadow: #AAA 0px 0px 4px 0px; */
+    float: none;
+    width: 80px;
+    margin-bottom: 15px;
+    /*margin-right: 20px;*/
+    display: inline-block
+  }
+}
+
+.navbar {
+    opacity: 0.9;
+}
+
+/* Add a slightly darker background to the heading charactes so thet stand
+   out better over the image background.
+*/
+H1 {
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+H2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+H3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+H4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Nice hr element which fades out towards the ends */
+hr.soft {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  padding: 0;
+  margin: 0;
+}
+
+.standard-font {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  #information li {
+    font-size: 18px;
+  }
+}
